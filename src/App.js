@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import EmptyStar from './assets/empty-star.svg';
 import FilledStar from './assets/filled-star.svg';
 import './styles.css';
-import { v4 as uuid } from 'uuid';
 
 
 const RatingSystem = ({activeRating, handleHover, handleClick}) => {
@@ -20,11 +19,12 @@ const RatingSystem = ({activeRating, handleHover, handleClick}) => {
       /* If the current star is less than or equal to the activeRating 
       (the final filled star to be rendered),
       render a Star component with filled prop set to true.
-      Note: Decided not to use a ternary here to make code more readable. */
+      NOTE: While I would prefer to use uuid for keys, install new npm packages 
+      doesn't seem to work with HackerRank's system. */
       if (i <= activeRating) {
         starsArr.push(
           <Star 
-            key={uuid()} 
+            key={i} 
             id={i} 
             filled={true} 
             handleHover={handleHover} 
@@ -37,7 +37,7 @@ const RatingSystem = ({activeRating, handleHover, handleClick}) => {
       } else {
         starsArr.push(
           <Star 
-            key={uuid()} 
+            key={i} 
             id={i} 
             filled={false} 
             handleHover={handleHover} 
