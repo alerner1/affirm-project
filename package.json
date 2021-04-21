@@ -1,0 +1,41 @@
+{
+  "name": "star-rating-system",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "^3.4.4"
+  },
+  "scripts": {
+    "start": "HOST=0.0.0.0 PORT=8000 ./node_modules/.bin/react-scripts start",
+    "pretest": "rm -rf ./junit.xml && npm install",
+    "test": "CI=true ./node_modules/.bin/react-scripts test --verbose --env=jsdom --testResultsProcessor=jest-junit"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.5",
+    "expect": "^26.6.2",
+    "jest-junit": "^12.0.0",
+    "react-test-renderer": "^16.13.1"
+  }
+}
