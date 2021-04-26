@@ -90,12 +90,12 @@ export default function App() {
     /* When the mouse enters the star, activeRating is set to that star.
     Therefore, filled stars are rendered up to the star the mouse entered. */
     if (movement === 'enter') {
-      setActiveRating(id)
+      setActiveRating(id);
 
     /* When the mouse leaves the star, activeRating is reset to the most recent 
     rating clicked by the user. */
     } else {
-      setActiveRating(savedRating)
+      setActiveRating(savedRating);
     }
   }
 
@@ -103,11 +103,11 @@ export default function App() {
   const handleClick = (id) => {
     // if the clicked star is identical to the saved rating, reset selected stars
     if (id === savedRating) {
-      setSavedRating(0)
+      setSavedRating(0);
 
     // otherwise, just change saved rating to the new star that was clicked
     } else {
-      setSavedRating(id)
+      setSavedRating(id);
     }
   }
 
