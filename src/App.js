@@ -4,7 +4,7 @@ import FilledStar from './assets/filled-star.svg';
 import './styles.css';
 
 
-const RatingSystem = ({activeRating, handleHover, handleClick}) => {
+const RatingSystem = ({ activeRating, handleHover, handleClick }) => {
   
   // creates an array of Star components based on whether they should be filled
   const mapStars = () => {
