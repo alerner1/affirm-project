@@ -105,7 +105,7 @@ export default function App() {
     if (id === savedRating) {
       setSavedRating(0);
 
-    // otherwise, just change saved rating to the new star that was clicked
+    // otherwise just change saved rating to the new star that was clicked
     } else {
       setSavedRating(id);
     }
