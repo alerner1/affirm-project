@@ -48,7 +48,7 @@ const RatingSystem = ({ activeRating, handleHover, handleClick }) => {
     }
 
     return starsArr;
-  }
+  };
 
   return (
     <div>
